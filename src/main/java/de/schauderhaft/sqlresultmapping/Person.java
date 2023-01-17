@@ -1,11 +1,11 @@
 package de.schauderhaft.sqlresultmapping;
 
-import javax.persistence.ColumnResult;
-import javax.persistence.ConstructorResult;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.NamedNativeQuery;
-import javax.persistence.SqlResultSetMapping;
+import jakarta.persistence.ColumnResult;
+import jakarta.persistence.ConstructorResult;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.NamedNativeQuery;
+import jakarta.persistence.SqlResultSetMapping;
 
 @SqlResultSetMapping(name = "NotAPersonResult", classes = { //
 		@ConstructorResult(targetClass = NotAPerson.class, //
@@ -14,7 +14,7 @@ import javax.persistence.SqlResultSetMapping;
 						@ColumnResult(name = "last_name") //
 		}) //
 })
-@NamedNativeQuery(name = "loadNonEntityById", query = "select first_name, last_name from person where id = :id", resultSetMapping = "NotAPersonResult")
+@NamedNativeQuery(name = "loadNonEntityById", query = "select first_name first_name, last_name last_name from person where id = :id", resultSetMapping = "NotAPersonResult")
 @Entity
 public class Person {
 
