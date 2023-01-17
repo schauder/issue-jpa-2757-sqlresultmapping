@@ -1,5 +1,14 @@
 package de.schauderhaft.sqlresultmapping;
 
-record NotAPerson(String firstName, String lastName) {
+public class NotAPerson {
+
+	final String firstName;
+	final String lastName;
+
+	public NotAPerson(String firstName, String lastName) {
+
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
 }
 
