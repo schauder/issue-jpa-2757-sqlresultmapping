@@ -1,5 +1,7 @@
 == Demonstrate SqlResultMapping for native queries with Spring Data JPA
 
+See: https://github.com/spring-projects/spring-data-jpa/issues/2757
+
 It turns out, it does not seem to work.
 
 While the pure JPA implementation works as expected, using it with Spring Data JPA results in an exception.
